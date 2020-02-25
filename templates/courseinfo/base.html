@@ -20,12 +20,12 @@
         </header>
         <nav>
             <ul>
-                <li><a href="">Instructors</a></li>
-                <li><a href="">Sections</a></li>
-                <li><a href="">Courses</a></li>
-                <li><a href="">Semesters</a></li>
-                <li><a href="">Students</a></li>
-                <li><a href="">Registrations</a></li>
+                <li><a href=" {% url 'courseinfo_instructor_list_urlpattern' %}  ">Instructors</a></li>
+                <li><a href="{% url 'courseinfo_section_list_urlpattern' %}">Sections</a></li>
+                <li><a href="{% url 'courseinfo_course_list_urlpattern' %}">Courses</a></li>
+                <li><a href="{% url 'courseinfo_semester_list_urlpattern' %}">Semesters</a></li>
+                <li><a href="{% url 'courseinfo_student_list_urlpattern' %}">Students</a></li>
+                <li><a href="{% url 'courseinfo_registration_list_urlpattern' %}">Registrations</a></li>
             </ul>
         </nav>
         <main>

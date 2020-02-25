@@ -6,6 +6,12 @@
 
 {% block content %}
     <h2>{{ student }}</h2>
+     <ul>
+        <li>
+            <a href="{{ student.get_update_url }}">Edit Student</a>
+        </li>
+     <li><a href="{{ student.get_delete_url }}">Delete student</a></li>
+    </ul>
 
     <section>
         <table>
@@ -29,7 +35,7 @@
         <ul>
             {% for registration in registration_list %}
                 <li>
-                    <a href="">{{ registration }}</a>
+                    <a href="{{ registration.get_absolute_url }}">{{ registration }}</a>
                 </li>
             {% empty %}
                 <li><em>There are currently no registrations for this student.</em></li>

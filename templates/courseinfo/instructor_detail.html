@@ -6,6 +6,10 @@
 
 {% block content %}
     <h2>{{ instructor }}</h2>
+    <ul>
+        <li><a href="{{ instructor.get_update_url }}">Edit Instructor</a></li>
+        <li><a href="{{ instructor.get_delete_url }}">Delete Instructor</a></li>
+    </ul>
 
     <section>
         <table>
@@ -25,7 +29,7 @@
         <ul>
             {% for section in section_list %}
                 <li>
-                    <a href="">{{ section }}</a>
+                    <a href="{{ section.get_absolute_url }} ">{{ section }}</a>
                 </li>
             {% empty %}
                 <li><em>There are currently no sections for this instructor.</em></li>

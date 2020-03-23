@@ -139,7 +139,7 @@ class Section(models.Model):
         return reverse('courseinfo_section_delete_urlpattern', kwargs={'pk': self.pk})
 
     def __str__(self):
-        return '%s - %s (%s)' % (self.course.course_number, self.section_name, self.semester.semester_name)
+        return '%s - %s (%s)' % (self.course.course_number, self.section_name, self.semester.__str__())
 
     class Meta:
         ordering = ['course__course_number', 'section_name', 'semester__semester_name']

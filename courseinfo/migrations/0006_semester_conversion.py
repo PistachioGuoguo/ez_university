@@ -11,7 +11,6 @@ YEARS = [
     {
         'year': 9999,
     },
-
 ]
 
 PERIODS = [
@@ -46,13 +45,13 @@ def forward_convert_semester_data(apps, schema_editor):
         this_year = extract_year(semester.semester_name)
         this_period_name = extract_period_name(semester.semester_name)
 
-        year_object = year_class.objects.get(
+        year_object,is_created = year_class.objects.get_or_create(
             year=this_year
         )
         semester.year = year_object
         semester.save()
 
-        period_object = period_class.objects.get(
+        period_object, is_created = period_class.objects.get_or_create(
             period_name=this_period_name
         )
         semester.period = period_object
@@ -68,13 +67,13 @@ def reverse_convert_semester_data(apps, schema_editor):
     for semester in semesters:
         semester.semester_name = str(semester.year.year) + ' - ' + semester.period.period_name
 
-        year_object = year_class.objects.get(
+        year_object,is_created = year_class.objects.get_or_create(
             year=9999
         )
         semester.year = year_object
         semester.save()
 
-        period_object = period_class.objects.get(
+        period_object,is_created = period_class.objects.get_or_create(
             period_sequence=9999
         )
         semester.period = period_object
@@ -102,7 +101,7 @@ def add_calendar_period_data(apps, schema_editor):
 def remove_year_data(apps, schema_editor):
     year_model_class = apps.get_model('courseinfo', 'Year')
     for this_year in YEARS:
-        year_object = year_model_class.objects.get(
+        year_object,is_created = year_model_class.objects.get_or_create(
             year=this_year['year']
         )
         year_object.delete()
@@ -132,13 +131,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='semester',
             name='year',
-            field=models.ForeignKey(to='courseinfo.year', on_delete=models.PROTECT, default=9999)
+            field=models.ForeignKey(to='courseinfo.Year', on_delete=models.PROTECT, default=9999)
         ),
 
         migrations.AddField(
             model_name='semester',
             name='period',
-            field=models.ForeignKey(to='courseinfo.period', on_delete=models.PROTECT, default=9999)
+            field=models.ForeignKey(to='courseinfo.Period', on_delete=models.PROTECT, default=9999)
         ),
 
         migrations.RunPython(

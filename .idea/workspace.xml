@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/courseinfo/migrations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/courseinfo/templates/courseinfo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,8 +48,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\py\590web\ez_university\courseinfo\templates\courseinfo" />
+      <recent name="F:\py\590web\ez_university\courseinfo\static\courseinfo" />
+      <recent name="F:\py\590web\ez_university\courseinfo\templates" />
+      <recent name="F:\py\590web\ez_university\courseinfo\static" />
       <recent name="F:\py\590web\ez_university\courseinfo\migrations" />
-      <recent name="F:\py\590web\ez_university\templates\courseinfo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\py\590web\ez_university\courseinfo\templates\courseinfo" />
       <recent name="F:\py\590web\ez_university\courseinfo" />
     </key>
   </component>
@@ -101,34 +107,28 @@
       <workItem from="1584910125354" duration="7358000" />
       <workItem from="1584985446476" duration="9000" />
       <workItem from="1585068752722" duration="5895000" />
+      <workItem from="1585173915073" duration="9820000" />
+      <workItem from="1585189846410" duration="203000" />
+      <workItem from="1585238055263" duration="10363000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="157" key="FileChooserDialogImpl" timestamp="1582417620698">
+    <state x="548" y="157" key="FileChooserDialogImpl" timestamp="1585190046038">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582417620698" />
+    <state x="548" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585190046038" />
     <state x="279" y="58" key="SettingsEditor" timestamp="1582042081516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582042081516" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584985446449">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585189900388">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584985446449" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585189900388" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582588580085">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -147,7 +147,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/courseinfo/views.py</url>
-          <line>1</line>
+          <line>2</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
